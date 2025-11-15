@@ -1,0 +1,55 @@
+body {
+  font: 1.2em / 1.5 sans-serif;
+}
+* {
+  box-sizing: border-box;
+}
+button {
+  display: block;
+}
+section {
+  margin-bottom: 5px;
+}
+.profile {
+  background-color: rgb(240, 123, 240);
+  color: white;
+  padding: 10px 5px 10px 5px;
+}
+.about,
+.contact {
+  border: 5px solid purple;
+  border-radius: 10px;
+  padding: 5px;
+}
+form {
+  border: 3px dotted red;
+  padding: 10px;
+  color: darkblue;
+}
+form p {
+  margin-bottom: 2px;
+}
+form fieldset,
+textarea {
+  margin: 10px auto 10px auto;
+}
+button {
+  background-color: rgb(49, 178, 253);
+  border: none;
+  color: white;
+  padding: 5px;
+  border-radius: 2px;
+}
+button:hover {
+  background-color: white;
+  color: rgb(49, 199, 245);
+  border: 2px solid rgb(49, 199, 245);
+}
+.message h2 {
+  color: purple;
+  border: 3px solid purple;
+  background-color: white;
+  border-radius: 10px;
+  padding: 2px 5px 2px 5px;
+  text-align: center;
+}
