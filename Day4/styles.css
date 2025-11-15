@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+/* Container for all sections */
+body {
+  display: flex;
+  flex-direction: column;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Profile Section - Centered */
+.profile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 40px;
+  gap: 15px;
+  background-color: rgb(211, 59, 211);
+  color: white;
+}
+
+.profile img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile h1 {
+  font-size: 2.5rem;
+}
+
+.profile p {
+  font-size: 1.1rem;
+  color: #e4dbdb;
+}
+
+/* About Section */
+.about {
+  margin-bottom: 40px;
+  background-color: rgb(228, 225, 225);
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.about h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #555;
+}
+
+/* Contact Section */
+.contact {
+  margin-bottom: 40px;
+}
+
+.contact h2 {
+  margin-bottom: 15px;
+  font-size: 2rem;
+}
+
+.contact ul {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  gap: 10px;
+}
+
+.contact li {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  padding: 10px;
+  background-color: #f0f0f0;
+  border-radius: 5px;
+}
+
+/* Message Form Section */
+.message {
+  margin-bottom: 40px;
+  border: 5px solid purple;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.message h2 {
+  margin-bottom: 20px;
+  font-size: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+form p {
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+
+textarea {
+  resize: vertical;
+  min-height: 150px;
+}
+
+/* Fieldset - Use Flexbox for Radio Buttons */
+fieldset {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+fieldset legend {
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+fieldset label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+}
+
+fieldset input[type="radio"] {
+  cursor: pointer;
+}
+
+/* Button */
+button {
+  padding: 12px 30px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  align-self: flex-start;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* RESPONSIVE DESIGN - MEDIA QUERIES */
+
+/* Tablet devices (768px and below) */
+@media (max-width: 768px) {
+  body {
+    padding: 15px;
+  }
+
+  .profile h1 {
+    font-size: 2rem;
+  }
+
+  .profile img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .about h2,
+  .contact h2,
+  .message h2 {
+    font-size: 1.5rem;
+  }
+
+  /* Stack fieldset labels vertically on smaller tablets */
+  fieldset {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  textarea {
+    min-height: 120px;
+  }
+}
+
+/* Mobile devices (480px and below) */
+@media (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+
+  .profile h1 {
+    font-size: 1.5rem;
+  }
+
+  .profile img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .profile p {
+    font-size: 0.95rem;
+  }
+
+  .about h2,
+  .contact h2,
+  .message h2 {
+    font-size: 1.2rem;
+  }
+
+  .contact ul {
+    gap: 8px;
+  }
+
+  .contact li {
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  /* Stack fieldset vertically */
+  fieldset {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+
+  fieldset legend {
+    font-size: 0.95rem;
+  }
+
+  form p {
+    font-size: 0.95rem;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    padding: 8px;
+    font-size: 0.95rem;
+  }
+
+  textarea {
+    min-height: 100px;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Extra small devices (under 360px) */
+@media (max-width: 360px) {
+  .profile h1 {
+    font-size: 1.2rem;
+  }
+
+  .profile img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .about h2,
+  .contact h2,
+  .message h2 {
+    font-size: 1rem;
+  }
+
+  form p {
+    font-size: 0.9rem;
+  }
+}
